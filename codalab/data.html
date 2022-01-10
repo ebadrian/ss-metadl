@@ -1,0 +1,42 @@
+<h1>Self-Service MetaDL</h1>
+Each meta-dataset is used to generate few-shot learning tasks via an API from the
+<a href="https://github.com/google-research/meta-dataset/">Meta-dataset repo</a>.
+For more details, please refer to the provided
+<a href="https://github.com/ebadrian/metadl/tree/master/starting_kit/tutorial.ipynb">tutorial</a>.
+
+The submission is a dataset that is compatible with the MetaDL data framework. The data
+should be formatted in the following way:
+<p>
+    <code>
+        metadataset <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;metatrain <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.tfrecords <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.tfrecords <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataset_spec.json <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;metatest <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;85.tfrecords <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86.tfrecords <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataset_spec.json <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;metadata
+        
+    </code>
+
+</p>
+
+
+<p><strong>Don't forget to include <u>metadata</u> file in the submitted zip file.</strong>
+    This file is meant to indicate the CodaLab instance that it should run its ingestion program.
+</p>
+<p>
+    Please consult this <a href="https://github.com/ebadrian/LLDL/tree/master/metadl/data">repository </a> 
+    to have guidelines on how to format the data in the right way. The images should be 64x64x3, 
+    if not they will be resized anyway.
+</p>
+<p>
+    Also make sure that the data you use is not following a bi-level 
+    specification (e.g. like in Omniglot for Meta-Dataset). This essentially means 
+    that we are not considering <strong>super-categories</strong> to generate 
+    episodes.
+</p>

@@ -1,0 +1,64 @@
+# Competition YAML file : general challenge defition
+admin_names: guyon,lsenta,pavao,Zhengying,ebadrian
+allow_public_submissions: true
+allow_teams: false
+anonymous_leaderboard: false
+description: Here you can submit datasets to Proto-Networks
+start_date: 2021-04-23 18:00:00+00:00
+competition_docker_image: 'ebadrian/ss-metadl:gpu-latest'
+disallow_leaderboard_modifying: true
+enable_detailed_results: false
+enable_forum: true
+enable_per_submission_metadata: false
+end_date: 2021-05-30 20:00:00+00:00
+force_submission_to_leaderboard: true
+has_registration: false
+html:
+  data: data.html
+  evaluation: evaluation.html
+  overview: overview.html
+  terms: terms.html
+image: logo.png
+
+# Phases
+phases:
+  # Development
+  1:
+    color: green
+    description: 'Development phase: create models and submit them or directly submit
+      results on validation and/or test data; feed-back are provided on the validation
+      set only.'
+    execution_time_limit: 7200
+    ingestion_program: ingestion_program.zip
+    input_data: 9b4500f7-3879-4bec-ae87-2e5ef7f198ce
+    is_scoring_only: false
+    label: ProtoNetworks
+    max_submissions: 100
+    max_submissions_per_day: 5
+    phasenumber: 1
+    public_data: 57327142-2155-4b37-9ee7-74820f56c812
+    reference_data: b8eb8623-783a-443f-a961-e438272f4cef
+    scoring_program: scoring_program.zip
+    start_date: 2021-04-23 18:30:00+00:00 # YYYY-MM-DD
+    starting_kit: starting_kit.zip
+
+#show_datasets_from_yaml: true
+title: "MetaDL few-shot learning self-service"
+
+# Leaderboard
+leaderboard:
+  columns:
+    Duration:
+      label: Duration
+      leaderboard: &id001
+        label: Results
+        rank: 1
+      numeric_format: 2
+      rank: 7
+    set1_score:
+      label: score
+      leaderboard: *id001
+      numeric_format: 4
+      rank: 2
+  leaderboards:
+    Results: *id001
