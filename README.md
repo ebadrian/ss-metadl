@@ -1,15 +1,10 @@
-# MetaDL Challenge : Few-shot learning series
+# MetaDL self-service : Few-shot learning 
 ---
-This repository contains the code associated to the Meta-Learning challenge organized by :
-- Adrian El Baz (U. Paris-Saclay; UPSud, France)
-- Isabelle Guyon (U. Paris-Saclay; UPSud/INRIA, France and ChaLearn, USA)
-- Zhengying Liu (U. Paris-Saclay; UPSud, France)
-- Jan N. van Rijn (Leiden University, Netherlands)
-- Sebastien Treguer (U. Paris-Saclay; UPSud, France)
-- Joaquin Vanschoren (Eindhoven University, the Netherlands)
-- Lisheng Sun (UPSud, France)
+This repository contains the code associated to the self-service MetaDL project, based
+on the MetaDL competition framework. One can submit a dataset in a tfrecords format 
+and obtains the performance of the AAAI 2021 MetaDL competition's winning solution: MetaDelta.
 
-[CodaLab competition link](https://competitions.codalab.org/competitions/26638#learn_the_details)
+[CodaLab competition link](https://competitions.codalab.org/competitions/31280)
 
 ## Outline 
 [I - Overview](#i---overview)
@@ -23,19 +18,11 @@ This repository contains the code associated to the Meta-Learning challenge orga
 ## I - Overview
 This is the official repository of the [Meta-Learning workshop co-hosted competition for AAAI 2021](https://aaai.org/Conferences/AAAI-21/ws21workshops/#ws18). 
 
+## MetaDL competition summary
 The competition focus on few-shot learning for image classification. This is an **online competition**, i.e. you need to provide your submission as raw Python code that will be ran on the CodaLab platform. The code is designed to be a module and to be flexible and allows participants to any type of meta-learning algorithms.
 
 You can find more informations on the [ChaLearn website](https://metalearning.chalearn.org/).
 
-## II - Installation
-
-Make sure you first clone the repository. Then you can directly jump to the [Starting kit](starting_kit/README.md) to get started.
-
-We provide 2 different ways of installing the repository.
-* Via a **conda** environment
-* Via a **Docker** image
-
-Follow the <code>README.md</code> in either case.
 
 
 ## III - References
